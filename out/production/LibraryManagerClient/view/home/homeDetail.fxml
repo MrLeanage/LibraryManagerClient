@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="detailPane" prefHeight="628.0" prefWidth="728.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.home.HomeDetailController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="618.0" layoutX="10.0" layoutY="10.0" stroke="#006a9f" strokeType="INSIDE" strokeWidth="5.0" width="718.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+      <JFXButton layoutX="81.0" layoutY="73.0" onAction="#loadAvailability" prefHeight="230.0" prefWidth="260.0" style="-fx-background-color: #006a9f;" text="CHECK AVAILABILITY" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton layoutX="355.0" layoutY="73.0" onAction="#loadRequestBook" prefHeight="230.0" prefWidth="260.0" style="-fx-background-color: #006a9f;" text="MAKE A REQUEST" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton layoutX="81.0" layoutY="321.0" onAction="#loadAbout" prefHeight="230.0" prefWidth="260.0" style="-fx-background-color: #006a9f;" text="ABOUT LIBRARY" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton layoutX="355.0" layoutY="321.0" onAction="#loadFeedback" prefHeight="230.0" prefWidth="260.0" style="-fx-background-color: #006a9f;" text="FEEDBACK" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton layoutX="171.0" layoutY="26.0" onAction="#loadHome" prefHeight="44.0" prefWidth="91.0" style="-fx-background-color: transparent;" text="| HOME " textFill="#006a9f" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="19.0">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>

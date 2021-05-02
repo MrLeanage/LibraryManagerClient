@@ -2,34 +2,50 @@ package view.home;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Scene;
+import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
-import javafx.stage.Stage;
 import services.Navigation;
+import services.rmiService.RMIClient;
 
-import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class LoginController {
-    /*
-    public void loadHome(ActionEvent actionEvent){
-        try {
-            AnchorPane home_page = (AnchorPane) FXMLLoader.load(getClass().getResource("home.fxml"));
+public class LoginController implements Initializable {
 
-            Scene scene = new Scene(home_page);
-            Stage app=(Stage)((Node) actionEvent.getSource()).getScene().getWindow();
-            app.setScene(scene);
-            app.show();
-        } catch (IOException ex) {
-            //AlertPopUp.generalError(ex);
-        }
-    }
-     */
+    @FXML
+    private AnchorPane basePane;
+
+    @FXML
+    private Label serverStatusLabel;
+
+    @FXML
+    private Label refreshLabel;
     @FXML
     private void loadHome(ActionEvent actionEvent){
         Navigation navigation = new Navigation();
-        navigation.loadHome(actionEvent);
+        navigation.loadHome(basePane);
     }
 
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        setData();
+    }
+
+    @FXML
+    private void setData(){
+        if(RMIClient.startClient()){
+
+            serverStatusLabel.setStyle("-fx-text-fill: #00B605 ");
+            serverStatusLabel.setText("Connected with the Library Manager Server");
+            refreshLabel.setVisible(false);
+        }
+
+        else{
+            serverStatusLabel.setStyle("-fx-text-fill: #ff0000 ");
+            serverStatusLabel.setText("Unable to connect to the Library Manager Server, Please Contact Your Administrator");
+            refreshLabel.setVisible(true);
+        }
+
+    }
 }

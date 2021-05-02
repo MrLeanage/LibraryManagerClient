@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="detailPane" prefHeight="628.0" prefWidth="728.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.feedbackManagement.FeedbackDetailController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="618.0" layoutX="10.0" layoutY="10.0" stroke="#006a9f" strokeType="INSIDE" strokeWidth="5.0" width="718.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+      <Label layoutX="31.0" layoutY="75.0" prefHeight="36.0" prefWidth="364.0" text="LIBRARY FEEDBACK" textFill="#006a9f">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="43.0" layoutY="137.0" prefHeight="414.0" prefWidth="643.0" style="-fx-border-color: #c2c2c2;">
+         <children>
+            <Label layoutX="24.0" layoutY="104.0" prefHeight="21.0" prefWidth="142.0" text="Title :" />
+            <Label layoutX="24.0" layoutY="155.0" prefHeight="21.0" prefWidth="142.0" text="Description :" />
+            <TextField fx:id="titileTextField" layoutX="171.0" layoutY="101.0" prefHeight="31.0" prefWidth="445.0" />
+            <Label layoutX="18.0" layoutY="31.0" prefHeight="21.0" prefWidth="160.0" text="Select Category :" />
+            <ComboBox fx:id="categoryChoiceBox" layoutX="166.0" layoutY="26.0" prefHeight="31.0" prefWidth="451.0" />
+            <TextArea fx:id="descriptionTextArea" layoutX="171.0" layoutY="165.0" prefHeight="124.0" prefWidth="445.0" />
+            <Label fx:id="titleLabel" layoutX="170.0" layoutY="137.0" prefHeight="21.0" prefWidth="445.0" textFill="RED" />
+            <Label fx:id="descripionLabel" layoutX="166.0" layoutY="297.0" prefHeight="21.0" prefWidth="451.0" textFill="RED" />
+            <JFXButton layoutX="256.0" layoutY="354.0" onAction="#giveFeedback" prefHeight="40.0" prefWidth="168.0" style="-fx-background-color: #00a8ff;" text="Give FeedBack" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton layoutX="442.0" layoutY="354.0" onAction="#loadHome" prefHeight="40.0" prefWidth="160.0" style="-fx-background-color: #04df1d;" text="Cancel" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <JFXButton layoutX="181.0" layoutY="36.0" onAction="#loadHome" prefHeight="44.0" prefWidth="91.0" style="-fx-background-color: transparent;" text="| HOME " textFill="#006a9f" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="19.0">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton layoutX="191.0" layoutY="46.0" onAction="#loadFeedback" prefHeight="44.0" prefWidth="119.0" style="-fx-background-color: transparent;" text="| FEEDBACK" textFill="#006a9f" AnchorPane.leftAnchor="111.0" AnchorPane.topAnchor="19.0">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>
